@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+  <a class="navbar-brand text-light" href="#">Maps Marker</a>
+</nav>
+<div class="container-fluid mt-4">
+  <div class="left-panel"></div>
+  <div class="google-map">
+    <app-google-map [markers]="markers | async"></app-google-map>
+  </div>
+  <div class="row">
+    
+  <div class="col-md-6 mt-4">
+     <div class=" marker-table ">
+    <app-marker-table [markers]="markers | async"></app-marker-table>
+  </div>
+  </div>
+  <div class="col-md-6 mt-4">
+    <div class="container city-chart ">
+    <app-city-chart [markers]="markers | async"></app-city-chart>
+  </div>
+  </div>
+  </div>
+ 
+  
+  <div class="right-panel"></div>
+</div>

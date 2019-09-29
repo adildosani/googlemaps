@@ -1,0 +1,18 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Fuel Type</th>
+      <th scope="col">Cards Accepted</th>
+      <th scope="col">Station Name</th>
+      <th scope="col">LPG Primary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let marker of groupedMarkers">
+      <td>{{marker.fuel_type_code}}</td>
+      <td>{{marker.cards_accepted}}</td>
+      <td>{{marker.station_name}}</td>
+      <td>{{marker.lpg_primary}}</td>
+    </tr>
+  </tbody>
+</table>

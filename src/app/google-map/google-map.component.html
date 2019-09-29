@@ -1,0 +1,15 @@
+  <agm-map [zoom]="zoomFactor">
+    <agm-marker *ngFor="let marker of markers" [latitude]="marker.location.latitude"
+      [longitude]="marker.location.longitude">
+      <agm-info-window>
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Owner Type: {{marker.owner_type_code}}</li>
+            <li class="list-group-item">GeoCode Status: {{marker.geocode_status}}</li>
+            <li class="list-group-item">Cards Accepted: {{marker.cards_accepted}}</li>
+            <li class="list-group-item">Fuel Type: {{marker.fuel_type_code}}</li>
+          </ul>
+        </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
